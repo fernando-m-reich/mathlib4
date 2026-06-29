@@ -213,7 +213,6 @@ theorem bernoulli_eval_one_add (n : ℕ) (x : ℚ) :
   have := bernoulli_comp_one_add_X n
   simpa using congr(Polynomial.eval x $this)
 
-set_option backward.isDefEq.respectTransparency false in
 theorem bernoulli_comp_neg_X (n : ℕ) :
     (bernoulli n).comp (-X) = (-1) ^ n • (bernoulli n + n • X ^ (n - 1)) := by
   cases n with
